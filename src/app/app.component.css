@@ -9,7 +9,7 @@
   width: 100vw; /* unnecessary, but let's keep things consistent */
   height: 100vh;
   font-weight: 100;
-  color: #A8B2B9;
+  color: var(--color-gray);
 }
 
 @media screen and (min-width: 850px) {
@@ -24,6 +24,7 @@
 main {
   grid-area: content;
   padding: 48px;
+  overflow-y: scroll;
 }
 
 aside {
@@ -90,7 +91,7 @@ aside {
     grid-template-columns: 1fr;
     grid-template-rows: 50px auto 1fr 50px;
   }
-  
+
   .menu {
     flex-direction: column;
     align-items: normal;
@@ -141,7 +142,7 @@ main {
 }
 
 .menu__item:hover {
-  color: black;
+  color: var(--color-light-green);
 }
 
 .menu__icon {

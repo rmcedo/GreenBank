@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SegurancaService } from './services/seguranca.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class AppComponent {
   title = 'GreenBank';
   links!: Array<any>;
 
-  constructor(public seguranca: SegurancaService) {}
+  constructor(public seguranca: SegurancaService, private router: Router) {}
 
   ngOnInit(): void {
     this.links = new Array();
@@ -21,7 +22,7 @@ export class AppComponent {
         textContent: "overview",
         class_a: "menu__item",
         class_i: "menu__icon fa fa-home",
-        class_span: "menu__text"
+        class_span: "menu__text",
       }
     )
     this.links.push(
@@ -39,7 +40,7 @@ export class AppComponent {
         textContent: "workout",
         class_a: "menu__item",
         class_i: "menu__icon fa fa-list",
-        class_span: "menu__text"
+        class_span: "menu__text",
       }
     )
     this.links.push(
@@ -48,7 +49,7 @@ export class AppComponent {
         textContent: "calendar",
         class_a: "menu__item",
         class_i: "menu__icon fa fa-calendar",
-        class_span: "menu__text"
+        class_span: "menu__text",
       }
     )
     this.links.push(
@@ -57,7 +58,7 @@ export class AppComponent {
         textContent: "goals",
         class_a: "menu__item",
         class_i: "menu__icon fa fa-signal",
-        class_span: "menu__text"
+        class_span: "menu__text",
       }
     )
     this.links.push(
@@ -66,17 +67,13 @@ export class AppComponent {
         textContent: "achivements",
         class_a: "menu__item",
         class_i: "menu__icon fa fa-trophy",
-        class_span: "menu__text"
+        class_span: "menu__text",
       }
     )
-    this.links.push(
-      {
-        rota: "",
-        textContent: "measurements",
-        class_a: "menu__item",
-        class_i: "menu__icon fa fa-angle-left",
-        class_span: "menu__text"
-      }
-    )
+  }
+
+  sair() : void {
+    this.seguranca.entrou = false
+    this.router.navigateByUrl("")
   }
 }
