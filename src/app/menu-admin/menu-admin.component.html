@@ -1,1 +1,35 @@
-<p>menu-admin works!</p>
+<div class="container">
+  <table class="table table-bordered table-light table-lg table-hover">
+    <thead>
+      <th>#</th>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Data Nascimento</th>
+      <th>Conta-Corrente</th>
+      <th>Agência</th>
+      <th>Ações</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes; let i = index">
+        <td>{{i}}</td>
+        <td>{{cliente}}</td>
+        <td>
+          <button (click)="deletar(i)" class="btn btn-outline-danger">Deletar</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <input type="text" [(ngModel)]="nome">
+    </div>
+
+
+  </div>
+  <div class="row text-center">
+    <div class="col"><button (click)="adicionar()" class="btn btn-success m-2">Adicionar</button></div>
+  </div>
+
+</div>

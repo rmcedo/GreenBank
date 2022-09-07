@@ -18,4 +18,8 @@ export class LoginComponent implements OnInit {
     this.seguranca.entrou = true;
     this.router.navigateByUrl("menucliente")
   }
+  entrar2(): void {
+    this.seguranca.entrou = true;
+    this.router.navigateByUrl("menuAdmin")
+  }
 }

@@ -1,30 +1,33 @@
+
 <div [ngClass]="{'wrapper': seguranca.entrou}">
 
     <main>
       <router-outlet></router-outlet>
     </main>
-  
+
     <aside [hidden]="!seguranca.entrou">
       <div class="logo">logo</div>
-  
+
       <div class="avatar">
-        
+
         <div class="avatar__img">
           <img src="https://picsum.photos/70" alt="avatar">
         </div>
 
         <div class="avatar__name">John Smith</div>
       </div>
-  
+
       <nav class="menu">
         <a *ngFor="let link of links" [class]="link.class_a" [routerLink]="link.rota">
           <i [class]="link.class_i"></i>
           <span [class]="link.class_span"> {{ link.textContent }} </span>
-        </a>
-      </nav>
 
+        </a>
+
+      </nav>
+      <button class="btn btn-sm btn-outline-danger" (click)="sair()">Sair</button>
       <div class="copyright">copyright &copy; 2022</div>
     </aside>
-    
+
   </div>
 

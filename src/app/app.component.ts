@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SegurancaService } from './services/seguranca.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class AppComponent {
   title = 'GreenBank';
   links!: Array<any>;
 
-  constructor(public seguranca: SegurancaService) {}
+  constructor(private router: Router,public seguranca: SegurancaService) {}
 
   ngOnInit(): void {
     this.links = new Array();
@@ -78,5 +79,13 @@ export class AppComponent {
         class_span: "menu__text"
       }
     )
+
+
+  }
+  sair(): void {
+
+    this.seguranca.entrou = false;
+    this.router.navigateByUrl("")
+
   }
 }

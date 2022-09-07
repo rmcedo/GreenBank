@@ -1,46 +1,63 @@
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+  <div class="d-flex flex-column">
+    <header class="">
+      <div>
+        <nav class="float-start">
+          <button class="btn btn-outline-success btn-sm fonte mb-2" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Acesse nossas funcionalidades</button>
+        </nav>
+      </div>
+    </header>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">GreenBank</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div class="row"> 
-
-      <div class="col"></div>
-      <div class="col-10">
-
-        <h3>You Have <b>Questions</b></h3>
-        <h3><b>We</b> Have Confidence</h3>
-
-        <p class="mt-2">Sign in to start your session</p>
-
-          <form>
-            <div class="group">      
-              <input type="text" required>
-              <span class="highlight"></span>
-              <span class="bar"></span>
-              <label>Name</label>
-            </div>
-
-            <div class="group">      
-              <input type="text" required>
-              <span class="highlight"></span>
-              <span class="bar"></span>
-              <label>Email</label>
-            </div> 
+    <img style="background-size: cover"
+      src="https://github.com/rmcedo/rmcedo/blob/main/icons/BEM%20VINDO%20AO%20GREENBANK%20BEM%20VINDO%20A%20UM%20MUNDO%20DE%20POSSIBILIDADES.gif?raw=true">
 
 
-            <button class="btn btn-modificado" (click)="entrar()">Continuar</button>
 
-          </form>
 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">GreenBank</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="row">
+
+          <div class="col"></div>
+          <div class="col-10">
+
+            <h3>You Have <b>Questions</b></h3>
+            <h3><b>We</b> Have Confidence</h3>
+
+            <p class="mt-2">Sign in to start your session</p>
+
+            <form>
+              <div class="group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+              </div>
+
+              <div class="group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Email</label>
+              </div>
+
+
+              <button class="btn btn-modificado" (click)="entrar()">Continuar</button>
+              <button class="btn btn-modificado mt-2" (click)="entrar2()">Admin</button>
+
+            </form>
+
+
+          </div>
+          <div class="col"></div>
+
+        </div>
 
       </div>
-      <div class="col"></div>
-
     </div>
 
-  </div>
-</div>
+
